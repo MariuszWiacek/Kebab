@@ -9,6 +9,7 @@
 <body>
     <div class="loading-page">
         <div class="loading-spinner"></div>
+        <div class="loading-progress" id="loadingProgress">0%</div>
     </div>
 
     <header>
@@ -24,7 +25,7 @@
             </ul>
         </nav>
     </header>
-
+    
     <div class="container">
         <main class="content">
             <section id="row1" class="grid-container">
@@ -48,11 +49,8 @@
         </main>
     </div>
 
-    <script>
-        // Simulate a loading delay
-        setTimeout(function () {
-            document.querySelector('.loading-page').style.display = 'none';
-        }, 3000);
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
+
+
