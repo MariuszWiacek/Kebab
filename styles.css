@@ -2,12 +2,12 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #000000;
 }
 
 /* Header styles */
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #000000;
     text-align: center;
     padding: 10px;
 }
@@ -15,6 +15,22 @@ header {
 header h1 {
     margin: 0;
 }
+
+.navbar {
+    background-color: #000000fb !important; 
+    color: #ffffff !important;
+}
+
+.nav-link  {
+    text-align: right;
+    color: #ffffff !important;
+}
+
+.navbar-brand 
+    {
+        color: #ffff00 !important;
+    }
+
 
 nav ul {
     list-style: none;
@@ -28,14 +44,18 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #ff0000;
 }
 
+h3 {
+    color: #ff0000;
+}
 /* Loading page styles */
 .loading-page {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -43,49 +63,83 @@ nav ul li a {
     height: 100%;
     background-color: rgb(0, 0, 0);
     z-index: 9999;
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
+}
+
+.logo {
+    position:fixed;
+    width: 500px; /* Adjust size as needed */
+    height: auto;
+    animation: pulsate 2s infinite;
 }
 
 .loading-spinner {
-    border: 4px solid #4f4f4f;
-    border-top: 4px solid #fe0000;
+    
+    border: 5px solid #f3f3f3ac;
+    border-top: 5px solid #db3434a5;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    animation: spin 3s linear infinite;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
 }
 
 .loading-progress {
-    color: #ff0000;
+    position: relative;
+    color: rgba(255, 255, 255, 0.411);
+    font-size: 24px;
     margin-top: 10px;
-    font-size: 16px;
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+p {
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 /* Container styles */
 .container {
     max-width: 1200px;
+    height: auto !important;
     margin: 0 auto;
     padding: 20px;
 }
 
 /* Grid styles */
 .grid-container {
+    background-color: #000000;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+    grid-gap: 0px;
+    height: fit-content !important;
 }
 
 .grid-item {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    color: #ccc;
+    background-color: #000000;
+    border: 1px solid #000000;
     padding: 20px;
     text-align: center;
+    position: top;
+    height: fit-content !important;
 }
 
 /* Content styles */
@@ -101,9 +155,85 @@ nav ul li a {
     pointer-events: none;
     transition-delay: 0.5s;
 }
+
+
+/* cards */
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.card {
+    flex: 0 0 auto;
+    width: 20%;
+    max-height: 100%;
+    margin: 10px;
+    color: #ccc;
+    background-color: #000000;
+    
+    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    position:relative;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.4), transparent);
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.card:hover::before {
+    opacity: 1;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.card p {
+  margin-bottom: 5px;
+}
+
+.navbar-toggler {
+    color: #ffffff !important;
+}
 /* Responsive styles */
 @media screen and (max-width: 768px) {
     .container {
         padding: 10px;
+    }
+
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .card {
+        width: 100% !important;
+    }
+
+    p {
+        font-size: small;
+    }
+
+    .navbar {
+        background-color: #191919fb !important; 
+        color: #ffffff !important;
     }
 }

@@ -1,56 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUPER KEBAB</title>
+    <title>WESTON SUPER KEBAB</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="loading-page">
+        <img src="./pics/kebab.jpg" class="logo" alt="Logo">
         <div class="loading-spinner"></div>
         <div class="loading-progress" id="loadingProgress">0%</div>
     </div>
 
-    <header>
-        <h1>SUPER KEBAB</h1>
-        <nav>
-            <ul>
-                <li><a href="#row1">Row 1</a></li>
-                <li><a href="#row2">Row 2</a></li>
-                <li><a href="#row3">Row 3</a></li>
-                <li><a href="#row4">Row 4</a></li>
-                <li><a href="#row5">Row 5</a></li>
-                <li><a href="#row6">Row 6</a></li>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="./pics/kebab.jpg" width="70" height="50" alt="Logo">
+            WESTON SUPER KEBAB
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+            
+                <li class="nav-item">
+                    <a class="nav-link" href="#row2">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#row3">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#row4">Our Food Truck</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#row5">Locations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#row6">Contact us</a>
+                </li>
             </ul>
-        </nav>
-    </header>
-    
+        </div>
+    </nav>
     <div class="container">
         <main class="content">
-            <section id="row1" class="grid-container">
-                <div class="grid-item">Row 1 Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1</div>
+            <section id="row0" class="grid-container">
+                <div class="grid-item">
+                    <video id="autoplayVideo2" width="100%" height="100%">
+                        <source src="./pics/kebvid.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
+
+
+                </div>
+        
             </section>
             <section id="row2" class="grid-container">
-                <div class="grid-item">Row 2</div>
+                <div class="grid-item">
+                    <video id="autoplayVideo3" width="100%" height="100%">
+                        <source src="./pics/aboutus.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p id="restaurantInfo">
+                        <!-- Content will be dynamically updated here -->
+                    </p>
+                
+                </div>
             </section>
+
             <section id="row3" class="grid-container">
-                <div class="grid-item">Row 3</div>
+                <div class="grid-item">
+                    <video id="autoplayVideo" width="50%" height="50%">
+                        <source src="./pics/kebvid2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p id="restaurantMenu">
+                        <!-- Content will be dynamically updated here -->
+                    </p>
+                </div>
             </section>
+
             <section id="row4" class="grid-container">
-                <div class="grid-item">Row 4</div>
+                <div class="grid-item">Our Food truck picture coming soon...</div>
             </section>
+
+
             <section id="row5" class="grid-container">
-                <div class="grid-item">Row 5</div>
+                <div class="card-container" id="cardContainer">
+                    <!-- Cards will be dynamically added here -->
+                </div>
             </section>
             <section id="row6" class="grid-container">
-                <div class="grid-item">Row 6</div>
+                <div class="grid-item">Contact us : 07448952003, email : wsk@gmail.com</div>
             </section>
         </main>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
-
-
