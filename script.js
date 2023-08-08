@@ -1,14 +1,14 @@
 let kebabPic = "./pics/kebab.jpg";
 
-var video = document.getElementById('autoplayVideo');
-        video.autoplay = true;
-        video.muted = true; // Autoplay typically requires muting
-        video.load();
+// var video = document.getElementById('autoplayVideo');
+//         video.autoplay = true;
+//         video.muted = true; // Autoplay typically requires muting
+//         video.load();
 
-        video.addEventListener('ended', function() {
-            video.currentTime = 0;
-            video.play();
-        });
+//         video.addEventListener('ended', function() {
+//             video.currentTime = 0;
+//             video.play();
+//         });
 
 
         var video2 = document.getElementById('autoplayVideo2');
@@ -60,22 +60,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const data = [
     {
-      name: 'Weston Kebab Brs',
+      name: 'BRISTOL',
       address: '123 Main St',
       location: 'Bristol',
     },
     {
-      name: 'WSM Kebab',
+      name: 'WESTON',
       address: '456 Elm Ave',
       location: 'WSM',
     },
     {
-      name: 'Taunton meat',
+      name: 'TAUNTON',
       address: '789 Oak Rd',
       location: 'Taunton',
     },
     {
-      name: 'Bath Kebs',
+      name: 'BATH SPA',
       address: '101 Pine Ln',
       location: 'Bath',
     },
@@ -124,8 +124,8 @@ function updateRestaurantInfo() {
     `;
 
     const menuContent = `
-    
-        <h2>OUR MENU</h2><br><br>
+    <br><br>
+        <h2 style="text-decoration: underline";>MENU</h2><br>
         <h3>Kebabs</h3>
         <p><strong>Lamb Kebab - £8.99</strong><br>
             Grilled marinated lamb served with pita bread, lettuce, tomatoes, onions, and your choice of sauce.</p>
