@@ -307,8 +307,14 @@ p {
     }
 
     p {
-        font-size: small;
+        font-size: small !important;
     }
+
+    h5 {
+        font-size: medium !important;
+    }
+
+    
 
 
 }
