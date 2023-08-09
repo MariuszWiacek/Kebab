@@ -198,3 +198,11 @@ readMoreButtons.forEach((button, index) => {
     });
 });
 
+$(document).ready(function () {
+    // Close the navbar when a menu item is clicked
+    $(".navbar-nav li a").click(function(event) {
+        if ($(window).width() < 992) { // Adjust breakpoint as needed
+            $(".navbar-toggler").click(); // Simulate toggler click to hide the menu
+        }
+    });
+});

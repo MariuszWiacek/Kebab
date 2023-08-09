@@ -12,25 +12,65 @@ header {
     
 }
 
+#autoplayVideo3
+{width: 100%;}
 header h1 {
     margin: 0;
 }
 
+/* CSS for navbar */
 .navbar {
-    background-color: #000000fb !important; 
+    background-color: #000000fb !important;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar a {
+    display: block;
+    color: white;
+   
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: color 0.3s; /* Only transition the color property */
+}
+
+/* Change font color on hover */
+.navbar a:hover {
+    color: rgba(255, 242, 0, 0.735) !important; /* Change to your desired color */
+}
+
+/* Additional styles for specific elements */
+.nav-link {
+    text-align: right !important;
     color: #ffffff !important;
 }
 
-.nav-link  {
-    text-align: right;
-    color: #ffffff !important;
+.navbar-brand {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #fff700 !important;
+    text-shadow: 0 0 10px rgb(255, 255, 255) !important; /* Neon light glow effect */
+    transition: text-shadow 1s !important; /* Transition the text-shadow property */
 }
 
-.navbar-brand 
-    {
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        color: #ffff00 !important;
+/* Add a stronger neon glow effect on hover */
+.navbar-brand:hover {
+    text-shadow: 0 0 20px rgb(255, 0, 0) !important; /* Stronger neon glow */
+    animation: neon-flicker 1s infinite alternate !important; /* Flickering animation */
+}
+
+/* Animation for flickering neon effect */
+@keyframes neon-flicker {
+    from {
+        text-shadow: 0 0 20px rgba(255, 255, 0, 1);
     }
+    to {
+        text-shadow: 0 0 25px rgba(255, 255, 0, 1);
+    }
+}
+
+
 
 h5 {
     text-transform: uppercase;
@@ -50,20 +90,7 @@ h5 {
         opacity: 0;
     }
 }
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-}
 
-nav ul li {
-    margin-right: 10px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #ff0000;
-}
 
 h3 {
     color: #ff0000;
@@ -243,6 +270,7 @@ p {
 
 .navbar-toggler {
     color: #ffffff !important;
+    border-color: #fff700 !important;
 }
 #autoplayVideo2 {
 
@@ -252,7 +280,9 @@ p {
 }
 
 .navbar-toggler-icon {
-    background-color: #ffffff;
+    
+    background-color: rgb(255, 242, 0) ;
+    border-radius: 50%;
 }
 /* Responsive styles */
 @media screen and (max-width: 768px) {
